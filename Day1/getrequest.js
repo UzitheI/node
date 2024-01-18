@@ -13,3 +13,33 @@
 // .catch(error=>{
 //     console.log(error);
 // });
+
+
+
+//this is a get method using only node, it is comparatively more verbose than with an STL library
+
+
+const https=require ('https');
+//first we require an https
+
+const options={
+    hostname:'example.com',
+    port:433,
+    path:'/todos',
+    method:'GET', 
+};
+//these are all the options that are aligned with the URL 
+
+const req=https.request(options,res =>{
+    console.log(`statusCode: ${res.statusCode}`);
+
+    res.on('data',d=>{
+        process.stdout.write(d);
+    });
+});
+
+req.on('error',error=>{
+    console.log(error);
+});
+
+req.end();
