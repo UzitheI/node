@@ -1,0 +1,8 @@
+either hosted service or do it locally, for hosted we use mongoDB atlas
+
+we install mongodb with mongo shell and check with mongosh 
+
+mongodb stores data in the form of a bson file which is binary json but at the end of the day what we recieve is a json file and there is a possibility of nesting documents in json like we can add additional features to our features
+
+
+
