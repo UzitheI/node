@@ -13,3 +13,14 @@ using var to write variables
 help
 exit
 */
+//now creating documents
+
+/*
+db.books.insertOne({title:"The color",author:"ujjwal", pages:232,rating:7,genres:["magic","fantasy"]})
+
+
+*/
+
+//when we use db.books.find() mongo shell will find the first 20 items inside the database collection
+
+//type it to iterate next 20
