@@ -22,3 +22,9 @@ db.books.find({rating:8}).sort({title:1})
 //finally chaining all of it 
 
 db.books.find().sort()
+
+//chaining all of it 
+
+db.books.find({rating:7}).sort({title:1}).limit(3);
+//should get 3 elements sorted in ascnding order,we can further chain the count if we want to
+
