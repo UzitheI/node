@@ -17,6 +17,15 @@ db.books.find({rating:{$gt:7},author:"patrick bamford"})
 
 //now or operator 
 
+db.books.find({$or:[{rating:7},{author:'patrick bamford'}]}).limit(8)
+
+//using the or operator i can pass 2 arguments inside my find function 
+
+
+//a complex querey can be 
+
+db.books.find({$or:[{pages:{$lt:300}},{author:'Ram vilas'}]})
+
 
 
 
