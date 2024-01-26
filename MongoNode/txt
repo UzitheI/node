@@ -1,0 +1,10 @@
+ //when we were using find method in the shell, it automatically fetched 20 documents for us which normally isnt the case, the find method returns a 
+    //----------cursor----------
+    //and a cursor is like a pointer which points to various documents inside the collection, the cursor if given any filter points to specific documents and in the absense of it picks the first 20 and the next 20 accordingly 
+
+
+
+    //there are other functions like :
+    //toArray= to array reads the document from the collection and stores it in the array for us 
+
+    //forEach=for each method used inthe find method brings the first batch which fetches about 101 documents 
