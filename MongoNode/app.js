@@ -1,20 +1,21 @@
 const express =require('express')
-
+const {connectToDb,getDb} =require('./db')
 //init 
 
 const app=express();
 
-//listen request
-
-app.listen(3000,()=>{
-    console.log("welcome the app")
+//db connection 
+connectToDb((err)=>{
+    if(!err){
+        app.listen(3000,()=>{
+            console.log("welcome the app")
+        })
+        db=getDb()
+    }
 })
 
-//get 
 
-app.get('/books',(req,res)=>{
-    res.json({mssg:"welcome to the jungle"})
-})
+
 
 
 //first of all we install nodemon because it helps to serve the development server
