@@ -12,7 +12,7 @@ let dbconnection;
 module.exports={
     //argument to the connect to db function called cb which is responsible for 
     connectToDb:(cb)=>{
-        MongoClient.connect("mongodb://localhost:27017")
+        MongoClient.connect("mongodb://localhost:27017/bookstore")
         .then((client)=>{
             dbconnection=client.db()
 
