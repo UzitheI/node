@@ -21,10 +21,15 @@ connectToDb((err)=>{
 
 //a lot of books 
 app.get('/books',(req,res)=>{
+    //pagination
+    const page=req.query.p || 0
+    const booksperPage=3
     let books=[]
     db.collection('books')
     .find()
     .sort({author:1})
+    .skip(page*booksperPage)
+    .limit(5)
     .forEach(book=>books.push(book))
     .then(()=>{
         res.status(200).json(books)
