@@ -5,6 +5,9 @@ const { ObjectId } = require('mongodb');
 
 const app=express();
 
+app.use(express.json())
+//this is a middleware which helps to convert our post request to json so that we can use it 
+
 //db connection 
 connectToDb((err)=>{
     if(!err){
@@ -58,3 +61,49 @@ app.get('/books/:id',(req,res)=>{
     }
     })
 
+app.post('/books',(req,res)=>{
+    const book=req.body
+
+    db.collection('books')
+    .insertOne(book)
+    .then((result)=>{
+        res.status(200).json(result)
+    })
+    .catch(err=>{
+        res.status(500).json({err:"couldnt create a new document "})
+    })
+})
+
+app.delete('/books/:id',(req,res)=>{
+    if(ObjectId.isValid(req.params.id)){
+        db.collection('books')
+        .deleteOne({_id:new ObjectId(req.params.id)})
+        .then(result=>{
+            res.status(200).json(result)
+        })
+        .catch(err=>{
+            res.status(500).json({mssg:"couldnt handle delete request"})
+        })
+    }
+    else{
+        res.status(500).json({err:'err is not valid'})
+    }
+})
+
+app.patch('/books/:id',(req,res)=>{
+    const updates=req.body;
+    if(ObjectId.isValid(req.params.id)){
+        db.collection('books')
+        .updateOne({_id:new ObjectId(req.params.id)},{$set: updates})
+        .then(result=>{
+            res.status(200).json(result )
+        })
+        .catch(err=>{
+            res.status(500).json({mssg:"error updating"})
+        })
+    }
+    else{
+        res.status(500).json({mssg:'the id is not correct'})
+    }
+
+})
