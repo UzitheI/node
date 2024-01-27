@@ -8,3 +8,11 @@
     //toArray= to array reads the document from the collection and stores it in the array for us 
 
     //forEach=for each method used inthe find method brings the first batch which fetches about 101 documents 
+
+
+
+    //pagination is the process by which we can divide the database items into different pages by which when we query we can get a certain amount of books 
+
+    for that we use the req module inside teh get method
+
+    
