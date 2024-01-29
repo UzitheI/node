@@ -1,0 +1,3 @@
+middleware is used extensively to server static files , error handle 
+
+The middleware can perform any operation, execute any code, make changes to the request and response object, and it can also end the request-response cycle. If it does not end the cycle then it must call next() to pass control to the next middleware function (or the request will be left hanging).
