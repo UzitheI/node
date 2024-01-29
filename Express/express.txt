@@ -21,3 +21,11 @@ Asynchronous api is the kind of api where the nodeJs will perform any other task
 for an async api to tell us about that the job is completed it can use a callback function 
 
 A callback hell is a trap we fall in if we want our js code to behave like C code, from top to down approach, this issue can be seen in async apis and can be fixed by callbacks
+
+
+modules 
+
+checkout(), copy(), delete(), get(), head(), lock(), merge(), mkactivity(), mkcol(), move(), m-search(), notify(), options(), patch(), post(), purge(), put(), report(), search(), subscribe(), trace(), unlock(), unsubscribe().
+
+
+
