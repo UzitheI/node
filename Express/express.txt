@@ -1,0 +1,23 @@
+express is a framework for node which can be used to create get, post, delete and patch requests in a much simple manner
+
+
+express helps us make requests in the server, we can create our very own db or create requests through fetches 
+
+IMPORTING AND EXPORTING MODULES 
+
+express itself is a module but we can create various other modules and export it to the main file so as to increase readability and increase manageability 
+
+Asynchronous api 
+
+There are 2 types of apis in node,
+synchronous api is the kind of api where we the execution of one event occurs only after the execution of another event, which means that if the api fetches or any sort of fetch is made synchronously in node it causes a major issue 
+
+
+node is single threaded which means  all requests to server run on the same thread, so if node fetches or send synchronously, it may take a lot of time to handle or process any task, thats why we use Asynchronous api 
+
+
+Asynchronous api is the kind of api where the nodeJs will perform any other task while it waits for any data to come from the fetch 
+
+for an async api to tell us about that the job is completed it can use a callback function 
+
+A callback hell is a trap we fall in if we want our js code to behave like C code, from top to down approach, this issue can be seen in async apis and can be fixed by callbacks
