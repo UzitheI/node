@@ -1,0 +1,10 @@
+we can connect with mongodb directly through our NODE app 
+
+there are 2 ways to communicate with a database,
+
+one is through the database's own query language like sql 
+--another is to write orm's that is representing the connection strings through object models in javascript 
+
+query langauge is often much faster than odm's because odm use transition code to map between objects and the database 
+
+
