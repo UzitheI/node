@@ -7,4 +7,32 @@ one is through the database's own query language like sql
 
 query langauge is often much faster than odm's because odm use transition code to map between objects and the database 
 
+databases are asynchronous which means that the models return instantly and the code that handles the error detection or data control part calls a bit later 
+
+
+to fix this we have callbacks in javascritp 
+
+callbacks are important form of functions which are typically called inside other functions to generally handle the errors and data handling part 
+
+
+callbacks have now been replaced by usage through promises, promises return an object which represents the future state of the object 
+
+in order to better deal with asynchronous api we can create a promise based api, a promise based api returns an object which provides us with a better way to deal with responses, a promise api uses fetch 
+
+
+//a sample code 
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+
+console.log(fetchPromise);
+
+fetchPromise.then((response) => {
+  console.log(`Received response: ${response.status}`);
+});
+
+console.log("Started request…");
+
+
+
 
